@@ -33,7 +33,7 @@ const sendEmail = async(options)=>{
         html: emailHtml
     }
     try{
-        await transporter.sendEmail(mail)
+        await transporter.sendMail(mail)
     }
     catch(error){
         console.error("Email Service Failed!!!");
@@ -82,4 +82,4 @@ const ForgotPasswordMailgenContent = (username, passwordResetURL)=>{
     }
 }
 
-export {emailVerificationMailgenContent, ForgotPasswordMailgenContent}
+export {emailVerificationMailgenContent, ForgotPasswordMailgenContent, sendEmail}
